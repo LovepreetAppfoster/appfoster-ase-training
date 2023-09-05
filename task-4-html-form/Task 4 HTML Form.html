@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        .ta, .th1, .td1 {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <h4>Primary details</h4>
+        <table>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>valid till</td>
+            </tr>
+            <tr>
+                <td>Medicare no. </td>
+                <td><input type="text" size="7" style="background-color: rgb(186, 208, 255);"> / <input type="text" size="1"></td>
+                <td><input type="text" pattern="(0[1-9]|1[0-2])\/\d{4}" placeholder="MM/YYYY" required size="6"></td>
+            </tr>
+            <tr>
+                <td>Title</td>
+                <td>
+                    <select name="" id="">
+                        <option value="">None</option>
+                        <option value="">Mr.</option>
+                        <option value="">Mrs.</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>First name, Last name</td>
+            </tr>
+            <tr>
+                <td>Name:</td>
+                <td>
+                    <input type="text" placeholder="Your name">
+                </td>
+            </tr>
+            <tr>
+                <td>Pref. name</td>
+                <td><input type="text" name="" id=""></td>
+            </tr>
+            <tr>
+                <td>DOB</td>
+                <td><input type="date" name="" id=""></td>
+            </tr>
+            <tr>
+                <td>Sex:</td>
+                <td><input type="radio" name="gender" id="">Male
+                    <input type="radio" name="gender" id="">Female
+                </td>
+            </tr>
+            <tr>
+                <td>Family name</td>
+                <td><input type="text"></td>
+            </tr>
+        </table>
+        <h4>Contact details</h4>
+        <table>
+            <tr>
+                <td>Phone </td>
+                <td>
+                    <input type="tel" size="10" placeholder="Home"><input type="tel" size="10" placeholder="Work">
+                </td>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="tel" placeholder="Fax" size="10"><input type="tel" placeholder="mobile" size="10">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="tel" placeholder="Next of Kin" size="10"><input type="tel" placeholder="Next of Kin" size="10">
+                    </td>
+                </tr>
+            </tr>
+            <tr>
+                <td>Emergency no.</td>
+                <td><input type="tel" size="10"></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="email" placeholder="youremail@mail.com"></td>
+            </tr>
+        </table>
+        <h4>Address Deatils</h4>
+        <h5>Resident details</h5>
+        <table>
+            <tr>
+                <td>Address 1</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Suburb</td>
+                <td><input type="text"></td>
+                <td>State</td>
+                <td>
+                    <select name="" id="">
+                        <option value="">MP</option>
+                        <option value="">UP</option>
+                        <option value="">PU</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Postal code</td>
+                <td><input type="text"></td>
+                <td>Country</td>
+                <td><input type="text"></td>
+            </tr>
+        </table>
+        <h5>Single Address</h5>
+        <table>
+            <tr>
+                <td>Are Mailing address and Resident address same?</td>
+                <td><input type="checkbox">Yes</td>
+            </tr>
+        </table>
+        <h5>Mailing Address</h5>
+        <table>
+            <tr>
+                <td>Address 1</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Suburb</td>
+                <td><input type="text"></td>
+                <td>State</td>
+                <td>
+                    <select name="" id="">
+                        <option value="">MP</option>
+                        <option value="">UP</option>
+                        <option value="">PU</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Postal code</td>
+                <td><input type="text"></td>
+                <td>Country</td>
+                <td><input type="text"></td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <td>IHI Number</td>
+                <td>8088 <input type="text" size="15"></td>
+            </tr>
+            <tr>
+                <td>Number status</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Record Status</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Last Uploaded</td>
+                <td><input type="text" ></td>
+            </tr>
+        </table>
+        <div style="margin-top: 15px;">
+            <input type="submit" style="margin-left: 50px;">
+            <input type="reset" style="margin-left: 50px;">
+        </div>
+    </form>
+</body>
+</html>

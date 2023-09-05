@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(251, 239, 255);
+}
+
+.left {
+  width: 60%;
+  float: left;
+  padding: 2.5em;
+}
+.left .cont {
+  display: flex;
+  margin-bottom: 20px;
+}
+.left .icon {
+  padding-top: 4px;
+}
+.left .left-div-head {
+  font-size: 1.2em;
+  font-family: "Lora", serif;
+  font-weight: bold;
+  margin: 0;
+  padding: 0 0 0 7px;
+  color: rgb(152, 162, 247);
+}
+.left .icon-div {
+  background-color: rgb(152, 162, 247);
+  height: 28px;
+  width: 28px;
+  text-align: center;
+  border-radius: 50%;
+}
+.left .container {
+  margin-bottom: 2em;
+}
+.left .Exp1 {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Nunito Sans", sans-serif;
+  color: rgba(109, 109, 109, 0.842);
+  font-weight: 300;
+}
+
+.bar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.line-container {
+  width: 300px;
+  height: 10px;
+  background-color: rgb(230, 232, 255);
+  position: relative;
+}
+
+.line-fill {
+  background-color: rgb(152, 162, 247);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#c {
+  width: 80%;
+  height: 100%;
+}
+
+#htm {
+  width: 70%;
+  height: 100%;
+}
+
+span {
+  font-size: 12px;
+  color: rgb(152, 162, 247);
+}
+
+p {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 11px;
+}
+
+h6 {
+  margin: 0;
+}
+
+.h6-in {
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+  font-family: "Lora", serif;
+  font-weight: bold;
+}
+
+.right {
+  padding: 2.5em 0 2.5em 0;
+}
+.right .pro-img {
+  background-color: rgba(105, 117, 221, 0.719);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.right .pic {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  margin-top: 1em;
+}
+.right .l2 {
+  background-color: rgba(82, 94, 204, 0.719);
+  padding: 1em;
+}
+.right .ul-mod {
+  list-style-type: none;
+  text-align: left;
+  padding-top: 1em;
+  margin-left: -2em;
+}
+.right .cont-out {
+  margin-bottom: 1em;
+}
+.right .h6-out {
+  font-size: 1em;
+  margin-bottom: 10px;
+  font-family: "Lora", serif;
+  font-weight: bold;
+}
+.right .ul-icon {
+  padding-left: 5px;
+}
+.right .h6-out-subhead {
+  margin-top: -0.5em;
+  margin-bottom: 1em;
+}
+.right #btech {
+  margin-top: 1em;
+}
+.right .l2-p {
+  margin: 0;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+h1 {
+  font-family: "Lora", serif;
+  font-weight: bold;
+  margin: 0;
+}
+
+.fsd {
+  font-family: "Lora", serif;
+  font-weight: bold;
+  font-size: 13px;
+  margin: 5px 0 0 0;
+  color: rgb(231, 233, 253);
+}
+
+aside {
+  width: 22%;
+  float: left;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,189 @@
+    1  git init
+    2  ls
+    3  git status
+    4  git add .
+    5  git status
+    6  git commit -m "Commit 1"
+    7  git remote add origin https://github.com/LSMAAN/Home-Security-Web-App-uisng-NodeJS-and-MongoDB.git
+    8  git config --global user.email "lsmann999@gmail.com"
+    9  git commit -m "1 commit"
+   10  git push -u origin master
+   11  git remote add origin https://github.com/LSMAAN/Home-Security-Web-App-uisng-NodeJS-and-MongoDB.git
+   12  git remote add origin https://github.com/LSMAAN/Home-Security-Web-App-uisng-NodeJS-and-MongoDB.git
+   13  git push -u origin main
+   14  git push -u origin master
+   15  git init
+   16  git status
+   17  git add .
+   18  git status
+   19  git commit -m "1 commit"
+   20  git remote add origin https://github.com/LSMAAN/ActiveNER_CUDA_Hindi.git
+   21  git push -u origin main
+   22  git push -u origin master
+   23  git status
+   24  git add .
+   25  git status
+   26  git commit -m "2 commit"
+   27  git remote add origin https://github.com/LSMAAN/ActiveNER_CUDA_Hindi.git
+   28  git push -u origin master
+   29  git init
+   30  git status
+   31  git add .
+   32  git status
+   33  git commit -m "1 commit"
+   34  git remote add origin https://github.com/LSMAAN/Tutor-Finder-App.git
+   35  git push -u origin master
+   36  git init
+   37  git add .
+   38  git commit -m "1 commit"
+   39  git remote add origin https://github.com/LSMAAN/Brick-Breaker-Game-using-JAVA.git
+   40  git push -u origin master
+   41  git init
+   42  git status
+   43  git ad .
+   44  git add .
+   45  git status
+   46  git commit -m "1 commit"
+   47  git remote add origin https://github.com/LSMAAN/Alien-Envasion-Game-using-Python.git
+   48  git push -u origin master
+   49  git init
+   50  git status
+   51  git add .
+   52  git status
+   53  gti commit -m "1 commit"
+   54  git commit -m "1 commit"
+   55  git remote add origin https://github.com/LSMAAN/Dataset.git 
+   56  git push -u origin master
+   57  echo "# LSMAAN" >> README.md
+   58  git init
+   59  git add .
+   60  git commit -m "Firt commit"
+   61  git branch -M main
+   62  git remote add origin https://github.com/LSMAAN/LSMAAN.git
+   63  git push -u origin main
+   64  git init
+   65  git add .
+   66  git commit -u "First commit"
+   67  git commit -m "first commit"
+   68  git remote add origin https://github.com/LSMAAN/ECommerece-Application.git
+   69  git push -u origin master
+   70  git init
+   71  git add .
+   72  git commit -m "First commit"
+   73  git remote add origin https://github.com/LSMAAN/NER-using-LSTM.git
+   74  git push -u origin master
+   75  git init
+   76  git add .
+   77  git commit -m "Commit"
+   78  git remote add origin https://github.com/LSMAAN/HMS.git
+   79  git remote add origin https://github.com/LSMAAN/HMS.git
+   80  git init
+   81  git status
+   82  git add .
+   83  git status
+   84  git commit -m "Commit"
+   85  git remote add origin https://github.com/LSMAAN/Hotel-Management-System.git
+   86  git push -u origin master
+   87  git init
+   88  git add .
+   89  git commit -m "Commit"
+   90  git remote add origin https://github.com/LSMAAN/Python_Classification.git
+   91  git push -u origin master
+   92  git init
+   93  git add .
+   94  git commit -m "commit"
+   95  git remote add origin https://github.com/LSMAAN/Pytorch-TinyVGG.git
+   96  git branch -M main
+   97  git remote add origin https://github.com/LSMAAN/Pytorch-TinyVGG.git
+   98  git push -u origin main
+   99  git init
+  100  git status
+  101  git add .
+  102  git status
+  103  git commit -m "commit"
+  104  git remote add origin https://github.com/LSMAAN/Pytorch-TinyVGG.git
+  105  git push -u origin master
+  106  git init
+  107  git add PunjabiDataset.txt 
+  108  git commit -m "commit"
+  109  git remote add origin https://github.com/LSMAAN/Dataset.git
+  110  git push -u origin master
+  111  git status
+  112  git commit -m "commit1"
+  113  git status
+  114  git remote add origin https://github.com/LSMAAN/Dataset.git
+  115  git push -u origin master
+  116  git init
+  117  git status
+  118  git add .
+  119  git status
+  120  git commit -m "First commit"
+  121  git branch -M main
+  122  git remote add origin https://github.com/LSMAAN/expressBookReviews.git
+  123  git remote add origin https://github.com/LSMAAN/expressBookReviews.git
+  124  git push -u origin main
+  125  git remote add origin origin https://github.com/LSMAAN/expressBookReviews.git
+  126  git push -u origin main
+  127  git push -u origin main
+  128  git init
+  129  git status
+  130  git add .
+  131  git commit -m "First commit"
+  132  git branch -M main
+  133  git remote add origin https://github.com/LSMAAN/expressBookReviews.git
+  134  git push -u origin main
+  135  git init
+  136  git status
+  137  git add .
+  138  git commit -m "Second Commit"
+  139  git remote add origin https://github.com/LSMAAN/expressBookReviews.git
+  140  git init
+  141  git commit -m "Second commit"
+  142  git branch -M main
+  143  git remote add origin https://github.com/LSMAAN/expressBookReviews.git
+  144  git remote add origin https://github.com/LSMAAN/expressBookReviews.git
+  145  git push -u origin main
+  146  git init
+  147  git add .
+  148  git commit -m "Second Commit"
+  149  git branch -M main
+  150  git remote
+  151  git remote origin
+  152  git remote -v
+  153  git remote -r origin
+  154  git remote rm origin
+  155  git remote -v
+  156  git remote add origin https://github.com/LSMAAN/expressBookReviews.git
+  157  git push -u origin main
+  158  git pull origin main
+  159  git push -u origin main
+  160  git push origin main
+  161  git push origin master
+  162  git remote add origin1 https://github.com/LSMAAN/expressBookReviews.git
+  163  git push origin1 master
+  164  git init
+  165  git add .
+  166  git commit -m "first commit"
+  167  git branch -M main
+  168  git remote add origin https://github.com/LSMAAN/expressBookReviews.git
+  169  git push -u origin main
+  170  ls
+  171  git init
+  172  git status
+  173  git add .
+  174  git status
+  175  git commit -m "Commit"
+  176  git remote add origin https://github.com/LovepreetAppfoster/3550-CSS.git
+  177  git push -u origin main
+  178  git remote add origin https://github.com/LovepreetAppfoster/3550-CSS.git
+  179  git remote add origin https://github.com/LovepreetAppfoster/3550-CSS.git
+  180  git push -u origin main
+  181  ls
+  182  cd D:\AppFoster
+  183  ls
+  184  cd appfoster-ase-training/
+  185  ls
+  186  cd task-9-cli/
+  187  history
+  188  history>>txt.file
+  189  history>>file.txt

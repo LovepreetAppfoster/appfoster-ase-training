@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume</title>
+  <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <style>
+    body{
+      margin: 80px;
+    }
+    .grey-box{
+      background-color: rgb(230, 227, 227);
+    }
+    .image-container{
+      background-color: rgb(230, 227, 227);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .image-container img{
+      border: 5px solid rgb(170, 231, 241);
+    }
+    .underline{
+      text-decoration: underline;
+    }
+    ul{
+      list-style-type: none;
+      padding: 0;
+    }
+    ul.custom-bullets li{
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 5;
+      line-height: 1.5;
+    }
+    ul.custom-bullets li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 5px;
+      width: 8px; /* Increase the size of the bullet point */
+      height: 8px; /* Increase the size of the bullet point */
+      background-color: rgb(143, 248, 94);
+      
+    }
+    li{
+      margin-bottom: 5px;
+    }
+    .half {
+    flex: 1;
+    padding: 25px;
+    box-sizing: border-box;
+    }
+    .icon {
+      margin-right: 10px;
+    }
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    th, td{
+      padding: 15px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div style="display: flex; justify-content: space-between;">
+    <div class="grey-box" >
+      <div style=" margin: 10px;">
+        <h1>Your Name</h1>
+        <h3>Web Developer/Designer</h3>
+        <ul id="image-ul">
+          <li><i class="bi bi-house-door-fill"></i> 555 Street Address, Toledo, Ohio, 43606 USA</li>
+          <li><i class="bi bi-telephone-fill"></i> (000) 0000-0000</li>
+          <li><i class="bi bi-envelope-at-fill"></i><a href="mailto:example@example.com" class="underline" style="margin-left: 5px;">Email Us</a></li>
+          <li><i class="bi bi-twitter"></i><a href="https://twitter.com/your_twitter_handle" class="underline"  style="margin-left: 5px;">Follow us on Twitter</a></li>
+          <li><i class="bi bi-browser-chrome"></i><a href="https://www.google.com/" class="underline" style="margin-left: 5px;">Check out my Website</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="image-container" style="height: 240px; width: 240px;">
+      <img src="https://media.istockphoto.com/id/1354898581/photo/shot-of-a-young-businessman-using-a-laptop-in-a-modern-office.jpg?s=612x612&w=0&k=20&c=dDDNcvIoG-4VdO01ZlENqODBoNocT434vIFp0duuTZM=" alt="photo" style="height: 225px; width: 225px;">
+    </div>
+  </div>
+  <div class="grey-box" style="margin-top: 30px;">
+    <div style="display: flex;">
+      <div class="half">
+        <h2 style="margin-left: 100px;"><i>Profile</i> :</h2>
+      </div>
+      <div class="half">
+        <p >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis exercitationem ipsam impedit mollitia praesentium velit, magnam odit cupiditate nobis pariatur voluptate consectetur possimus nesciunt dolore officia quia sit. Amet, voluptatibus!</p>
+      </div>
+    </div>
+    <div style="display: flex; margin-top: -60px;">
+      <div class="half">
+        <h2 style="margin-left: 100px;"><i>Skills</i> :</h2>
+      </div>
+      <div class="half" style="display: flex;">
+        <div class="half">
+          <ul class="custom-bullets">
+            <li>XHTML</li>
+            <li>HTML</li>
+            <li>PHP</li>
+            <li>JS</li>
+            <li>WordPress</li>
+          </ul>
+        </div>
+        <div class="half">
+          <ul class="custom-bullets">
+            <li>MySQL</li>
+            <li>Photoshop</li>
+            <li>JQuery</li>
+            <li>JS</li>
+            <li>CSS</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div style="display: flex; margin-top: -60px;">
+      <div class="half">
+        <h2 style="margin-left: 100px;"><i>Experience</i> :</h2>
+      </div>
+      <div class="half">
+        <h3>Web Developer</h3>
+        <h4 style="color: blueviolet; margin-top: -15px;">Comapany Name</h4>
+        <h4 style="margin-top: -15px;">Feb 2020</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, sed eligendi? Sequi, cupiditate harum recusandae blanditiis dolores labore corporis deleniti aliquam maiores exercitationem praesentium provident soluta eligendi! Maxime, pariatur dolorem!</p>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top: 30px;">
+    <h2>Education</h2>
+    <table style="width: 100%;">
+      <tr>
+        <th>Institution</th>
+        <th>Subjects</th>
+        <th>Year</th>
+      </tr>
+      <tr>
+        <td>ABC</td>
+        <td>XYZ</td>
+        <td>2020</td>
+      </tr>
+      <tr>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>
