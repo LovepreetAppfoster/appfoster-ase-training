@@ -1,0 +1,38 @@
+1. To insert values in customers table.
+INSERT INTO Customers
+VALUES (9, 'Jimmy', 'Noe', 30, 'USA');
+
+2.To insert multiple values in customers table.
+INSERT INTO Customers(customer_id, first_name, last_name, age, country)
+VALUES(6, 'Lovepreet', 'Singh', 25, 'India'),
+	  (7, 'Shelly', 'Badhan', 24, 'Canada');
+
+3.To get number of customers per country.
+SELECT country, COUNT(*) AS customer_count
+FROM Customer
+GROUP BY country;
+
+4.To get the orders who have amount between 100 to 500.
+SELECT *
+FROM Orders
+WHERE amount >= 100 AND amount <= 500;
+
+5.To get the first name and last name of customers who have bought Keyboard.
+SELECT c.first_name, c.last_name
+FROM Customers c
+JOIN Orders o ON c.customer_id = o.customer_id
+WHERE o.item = 'Keyboard';
+
+6.To get the name of the countries where shipping status is Pending.
+SELECT DISTINCT c.country
+FROM Customers c
+INNER JOIN Shippings s ON c.customer_id = s.customer
+WHERE s.status = 'Pending';
+
+7.To get the number of orders per customer.
+SELECT c.customer_id, c.first_name, c.last_name, COUNT(o.order_id) AS order_count
+FROM Customer c
+LEFT JOIN Orders o ON c.customer_id = o.customer_id
+GROUP BY c.customer_id, c.first_name, c.last_name
+ORDER BY order_count DESC; -- Optionally, you can order the results by order_count
+

@@ -6,12 +6,21 @@
   <title>Resume</title>
   <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500&family=Roboto:wght@700&display=swap" rel="stylesheet">
   <style>
     body{
       margin: 80px;
+      
     }
     .grey-box{
       background-color: rgb(230, 227, 227);
+    }
+    p{
+        font-family: 'Poppins', sans-serif;
+    }
+    .li-text{
+        
     }
     .image-container{
       background-color: rgb(230, 227, 227);
@@ -34,24 +43,27 @@
       padding-left: 20px;
       margin-bottom: 5;
       line-height: 1.5;
+
     }
     ul.custom-bullets li::before {
       content: "";
       position: absolute;
       left: 0;
       top: 5px;
-      width: 8px; /* Increase the size of the bullet point */
-      height: 8px; /* Increase the size of the bullet point */
+      width: 8px; 
+      height: 8px; 
       background-color: rgb(143, 248, 94);
-      
     }
     li{
       margin-bottom: 5px;
     }
+    .li-skill{
+        font-family: 'Poppins', sans-serif;
+    }
     .half {
     flex: 1;
     padding: 25px;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     }
     .icon {
       margin-right: 10px;
@@ -63,93 +75,98 @@
     th, td{
       padding: 15px;
       text-align: center;
+      font-family: 'Poppins', sans-serif;
     }
   </style>
 </head>
 <body>
-  <div style="display: flex; justify-content: space-between;">
-    <div class="grey-box" >
-      <div style=" margin: 10px;">
-        <h1>Your Name</h1>
-        <h3>Web Developer/Designer</h3>
-        <ul id="image-ul">
-          <li><i class="bi bi-house-door-fill"></i> 555 Street Address, Toledo, Ohio, 43606 USA</li>
-          <li><i class="bi bi-telephone-fill"></i> (000) 0000-0000</li>
-          <li><i class="bi bi-envelope-at-fill"></i><a href="mailto:example@example.com" class="underline" style="margin-left: 5px;">Email Us</a></li>
-          <li><i class="bi bi-twitter"></i><a href="https://twitter.com/your_twitter_handle" class="underline"  style="margin-left: 5px;">Follow us on Twitter</a></li>
-          <li><i class="bi bi-browser-chrome"></i><a href="https://www.google.com/" class="underline" style="margin-left: 5px;">Check out my Website</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="image-container" style="height: 240px; width: 240px;">
-      <img src="https://media.istockphoto.com/id/1354898581/photo/shot-of-a-young-businessman-using-a-laptop-in-a-modern-office.jpg?s=612x612&w=0&k=20&c=dDDNcvIoG-4VdO01ZlENqODBoNocT434vIFp0duuTZM=" alt="photo" style="height: 225px; width: 225px;">
-    </div>
-  </div>
-  <div class="grey-box" style="margin-top: 30px;">
-    <div style="display: flex;">
-      <div class="half">
-        <h2 style="margin-left: 100px;"><i>Profile</i> :</h2>
-      </div>
-      <div class="half">
-        <p >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis exercitationem ipsam impedit mollitia praesentium velit, magnam odit cupiditate nobis pariatur voluptate consectetur possimus nesciunt dolore officia quia sit. Amet, voluptatibus!</p>
-      </div>
-    </div>
-    <div style="display: flex; margin-top: -60px;">
-      <div class="half">
-        <h2 style="margin-left: 100px;"><i>Skills</i> :</h2>
-      </div>
-      <div class="half" style="display: flex;">
-        <div class="half">
-          <ul class="custom-bullets">
-            <li>XHTML</li>
-            <li>HTML</li>
-            <li>PHP</li>
-            <li>JS</li>
-            <li>WordPress</li>
-          </ul>
+    <div style="padding-left: 4.5rem; padding-right: 4.5rem;">
+        <div style="display: flex; justify-content: space-between;">
+            <div class="grey-box" style="padding-left: 10px; padding-right: 10px;" >
+              <div>
+                  <h1 style="margin: 0; padding: 0; font-family: 'Lora', serif;
+                  font-family: 'Nunito Sans', sans-serif;
+                  font-family: 'Roboto', sans-serif;">Your Name</h1>
+                  <h3 style="padding-top: 5px; margin: 0; font-family: 'Roboto', sans-serif;"> <i>Web Developer / Designer</i></h3>
+                  <ul id="image-ul" style="padding-top: 20px;">
+                  <li class="li-text"><i class="bi bi-house-door-fill icon"></i> 555 Street Address, Toledo, Ohio, 43606 USA</li>
+                  <li class="li-text"> <i class="bi bi-telephone-fill icon"></i> (000) 0000-0000</li>
+                  <li class="li-text"><i class="bi bi-envelope-at-fill icon"></i><a href="mailto:example@example.com" class="underline" style="margin-left: 5px;">lovepreet.singh@appfoster.com</a></li>
+                  <li class="li-text"><i class="bi bi-twitter icon"></i><a href="https://twitter.com/your_twitter_handle" class="underline"  style="margin-left: 5px;">@lovepreet</a></li>
+                  <li class="li-text"><i class="bi bi-browser-chrome icon"></i><a href="https://github.com/LovepreetAppfoster" class="underline" style="margin-left: 5px;">github.com/lovepreet</a></li>
+                  </ul>
+              </div>
+            </div>
+            <div class="image-container" style="height: 240px; width: 240px;">
+              <img src="https://media.istockphoto.com/id/1354898581/photo/shot-of-a-young-businessman-using-a-laptop-in-a-modern-office.jpg?s=612x612&w=0&k=20&c=dDDNcvIoG-4VdO01ZlENqODBoNocT434vIFp0duuTZM=" alt="photo" style="height: 225px; width: 225px;">
+            </div>
         </div>
-        <div class="half">
-          <ul class="custom-bullets">
-            <li>MySQL</li>
-            <li>Photoshop</li>
-            <li>JQuery</li>
-            <li>JS</li>
-            <li>CSS</li>
-          </ul>
+        <div class="grey-box" style="margin-top: 30px; padding: 10px;">
+            <div style="display: flex;">
+                <div  style="margin-right: 2rem;">
+                    <h2 style="margin-left: 100px; font-family: 'Poppins', sans-serif; padding-left: 10px;"><i>Profile</i></h2>
+                </div>
+                <div style="margin-left: 3rem;">
+                    <p style="font-family: 'Poppins', sans-serif; font-size: 15px;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis exercitationem ipsam impedit mollitia praesentium velit, magnam odit cupiditate nobis pariatur voluptate consectetur possimus nesciunt dolore officia quia sit. Amet, voluptatibus!</p>
+                </div>
+            </div>
+            <div style="display: flex;">
+                <div class="" style="margin-right: 2rem;">
+                    <h2 style="margin-left: 100px; font-family: 'Poppins', sans-serif; padding-left: 20px;"><i>Skills</i></h2>
+                </div>
+                <div class="" style="display: flex; margin-left: 3.5rem;">
+                    <div class="">
+                        <ul class="custom-bullets">
+                            <li class="li-skill">XHTML</li>
+                            <li class="li-skill">HTML</li>
+                            <li class="li-skill">PHP</li>
+                            <li class="li-skill">JS</li>
+                            <li class="li-skill">WordPress</li>
+                        </ul>
+                    </div>
+                    <div class="" style="margin-left: 5rem;">
+                        <ul class="custom-bullets">
+                            <li class="li-skill">MySQL</li>
+                            <li class="li-skill">Photoshop</li>
+                            <li class="li-skill">JQuery</li>
+                            <li class="li-skill">JS</li>
+                            <li class="li-skill">CSS</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div style="display: flex;">
+                <div class="" style="margin-right: 40px;">
+                    <h2 style="margin-left: 45px; font-family: 'Poppins', sans-serif;"><i>Experience</i></h2>
+                </div>
+                <div class="" style="margin-left: 3rem;">
+                    <h2 style="font-family: 'Poppins', sans-serif;"> <i>Web Developer / Developer</i></h2>
+                    <h4 style="color: blueviolet; margin-top: -15px; font-family: 'Poppins', sans-serif;">Comapany Name</h4>
+                    <h4 style="margin-top: -15px; font-family: 'Poppins', sans-serif;">Feb 2020 - Present</h4>
+                    <p style="font-family: 'Poppins', sans-serif; font-size: 15px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, sed eligendi? Sequi, cupiditate harum recusandae blanditiis dolores labore corporis deleniti aliquam maiores exercitationem praesentium provident soluta eligendi! Maxime, pariatur dolorem!</p>
+                </div>
+            </div>
         </div>
-      </div>
+        <div style="margin-top: 30px;">
+            <h2 style="font-family: 'Roboto', sans-serif;">Education</h2>
+            <table style="width: 100%;">
+            <tr>
+                <th>Institution</th>
+                <th>Subjects</th>
+                <th>Year</th>
+            </tr>
+            <tr>
+                <td>ABC</td>
+                <td>XYZ</td>
+                <td>2020</td>
+            </tr>
+            <tr>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            </table>
+        </div>
     </div>
-    <div style="display: flex; margin-top: -60px;">
-      <div class="half">
-        <h2 style="margin-left: 100px;"><i>Experience</i> :</h2>
-      </div>
-      <div class="half">
-        <h3>Web Developer</h3>
-        <h4 style="color: blueviolet; margin-top: -15px;">Comapany Name</h4>
-        <h4 style="margin-top: -15px;">Feb 2020</h4>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, sed eligendi? Sequi, cupiditate harum recusandae blanditiis dolores labore corporis deleniti aliquam maiores exercitationem praesentium provident soluta eligendi! Maxime, pariatur dolorem!</p>
-      </div>
-    </div>
-  </div>
-  <div style="margin-top: 30px;">
-    <h2>Education</h2>
-    <table style="width: 100%;">
-      <tr>
-        <th>Institution</th>
-        <th>Subjects</th>
-        <th>Year</th>
-      </tr>
-      <tr>
-        <td>ABC</td>
-        <td>XYZ</td>
-        <td>2020</td>
-      </tr>
-      <tr>
-        <td>-</td>
-        <td>-</td>
-        <td>-</td>
-      </tr>
-    </table>
-  </div>
 </body>
 </html>
