@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <title>User List</title>
+    <style>
+        /* Add some basic CSS styles for the table and pagination */
+        .table-div{
+            /* margin: 10rem auto; */
+            margin: 20px;
+            width: 40%;
+        }
+        th{
+            font-size: 13px;
+        }
+        .cell2{
+            text-align: right;
+        }
+        .show-details{
+            border: none;
+            outline: none;
+            background-color: transparent;
+            color: #007AFE;
+        }
+        .cell1{
+            color: #007AFE;
+        }
+
+        .user-details {
+            display: none;
+        }
+        .toggle-icon {
+            cursor: pointer;
+        }
+
+        /* Modal styles */
+        .modal-user {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            /* display: flex; */
+            justify-content: center; 
+            align-items: center; 
+            z-index: 1;
+        }
+        .modal-content-user {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .close-button {
+            /* position: absolute; */
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-div container" style="">
+        <div class="table-div" style="margin:5px auto;">
+            <table class="table" style="">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col" class="cell2">Details</th>
+                    </tr>
+                </thead>
+                <tbody id="user-list">
+                    <!-- Users will be displayed here -->
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Pagiantion -->
+        <nav aria-label="Page navigation example" style="">
+            <ul class="pagination" style="font-size: 12px; justify-content: center;">
+              <li class="page-item" id="prevPage"><a class="page-link" href="#">Previous</a></li>
+              <li class="page-item"><a class="page-link" id="firstPage" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" id="currentPage" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">...</a></li>
+              <li class="page-item"><a class="page-link" id="lastPage" href="#">3</a></li>
+              <li class="page-item" id="nextPage"><a class="page-link" href="#">Next</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Modal for displaying user details -->
+    <div class="modal-user" id="user-modal">
+        <div class="modal-content-user">
+            <span class="close-button" id="close-modal">&times;</span>
+            <div id="modal-content-user"></div>
+        </div>
+    </div>
+
+    <script>
+        const pageSize = 5; // Number of users per page
+        let currentPage = 1;
+        let firstPage = 1;
+        let userData = []; // Store user data from the API
+
+        // Function to toggle the visibility of the modal
+        function toggleModal() {
+            const modal = document.getElementById('user-modal');
+            modal.style.display = (modal.style.display === 'flex') ? 'none' : 'flex';
+        }
+
+        // Function to display user details in the modal
+
+        function displayUserDetails(user) {
+            const modalContent = document.getElementById('modal-content-user');
+            modalContent.innerHTML = `
+                <h2>User Details</h2>
+                <p>Name: ${user.name}</p>
+                <p>Email: ${user.email}</p>
+                <p>Phone: ${user.phone}</p>
+                <p>ID: ${user.id}</p>
+            `;
+            toggleModal();
+        }
+
+        async function fetchUserData() {
+            try {
+                const response = await fetch('http://localhost:3001/api/users'); // Replace with your API endpoint
+                const responseData = await response.json();
+                userData = responseData.users; // Extract the "users" array from the response
+                totalPages = Math.ceil(userData.length / pageSize);
+                renderUserTable(currentPage);
+                updatePagination();
+            } catch (error) {
+                console.error('Error fetching user data:', error);
+            }
+        }
+
+        // Render user data for the specified page
+        function renderUserTable(page) {
+            const userList = document.getElementById('user-list');
+            userList.innerHTML = ''; // Clear previous data
+
+            const startIndex = (page - 1) * pageSize;
+            const endIndex = startIndex + pageSize;
+
+            for (let i = startIndex; i < endIndex && i < userData.length; i++) {
+                const user = userData[i];
+                const row = document.createElement("tr");
+
+                //Create name colum
+                const uname = user.name;
+                const nameCell = document.createElement("td");
+                nameCell.className = "cell1";
+                nameCell.textContent = uname;
+                row.appendChild(nameCell);
+
+                //Deatails colunm
+                      
+                const detailsCell = document.createElement("td");
+                detailsCell.className = "cell2";
+                const buttonIcon = document.createElement("button");
+                buttonIcon.className = "show-details";
+                const iconEye = document.createElement("i");
+                iconEye.className = "bi bi-eye-fill";
+                detailsCell.appendChild(buttonIcon);
+                buttonIcon.appendChild(iconEye);
+                row.appendChild(detailsCell);
+
+                //show user details by clicking eye button
+                buttonIcon.addEventListener('click', () => {
+                    displayUserDetails(user);
+                });
+
+                //Append data in Row
+                userList.appendChild(row);
+
+            }
+
+            updatePaginationControls();
+        }
+
+        // Event listener for closing the modal
+        document.getElementById('close-modal').addEventListener('click', () => {
+            toggleModal();
+        });
+
+        // Update pagination controls
+        function updatePaginationControls() {
+
+            const prevPageButton = document.getElementById('prevPage');
+            const nextPageButton = document.getElementById('nextPage');
+            const currentPageSpan = document.getElementById('currentPage');
+            const lastPageNumber = document.getElementById('lastPage');
+            const firstPageNumber = document.getElementById('firstPage');
+
+            prevPageButton.disabled = currentPage === 1;
+            nextPageButton.disabled = currentPage === Math.ceil(userData.length / pageSize);
+            const lp = Math.ceil(userData.length / pageSize);
+            lastPageNumber.textContent = lp;
+            firstPageNumber.textContent = 1;
+
+            if(currentPage === 1){
+                currentPageSpan.textContent = 2; 
+            }
+            else{
+                currentPageSpan.textContent = currentPage;
+            }
+            //console.log(currentPage);
+            
+        }
+    
+        // Event listeners for pagination buttons
+        document.getElementById('prevPage').addEventListener('click', () => {
+            if (currentPage > 1) {
+                currentPage--;
+                renderUserTable(currentPage);
+            }
+        });
+        
+        document.getElementById('lastPage').addEventListener('click', () => {
+            let lastPageButton = Math.ceil(userData.length / pageSize);
+            renderUserTable(lastPageButton);
+        })
+
+        document.getElementById('firstPage').addEventListener('click', () => {
+            renderUserTable(firstPage);
+        });
+
+        document.getElementById('nextPage').addEventListener('click', () => {
+            if (currentPage < Math.ceil(userData.length / pageSize)) {
+                currentPage++;
+                renderUserTable(currentPage);
+            }
+        });
+
+        document.getElementById('currentPage').addEventListener('click', () => {
+            renderUserTable(currentPage);
+        })
+
+        // Fetch user data when the page loads
+        window.onload = fetchUserData;
+    </script>
+</body>
+</html>

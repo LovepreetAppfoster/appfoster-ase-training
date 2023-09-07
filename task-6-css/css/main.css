@@ -98,6 +98,7 @@ h6 {
 
 .right {
   padding: 2.5em 0 2.5em 0;
+  background-color: rgba(114, 124, 207, 0.719);
 }
 .right .pro-img {
   background-color: rgba(105, 117, 221, 0.719);
@@ -136,6 +137,7 @@ h6 {
 .right .h6-out-subhead {
   margin-top: -0.5em;
   margin-bottom: 1em;
+  color: aqua;
 }
 .right #btech {
   margin-top: 1em;
