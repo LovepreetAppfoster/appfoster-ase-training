@@ -112,28 +112,19 @@
             modal.style.display = (modal.style.display === 'flex') ? 'none' : 'flex';
         }
 
-        // Function to display user details in the modal
 
-        function displayUserDetails(user) {
-            const modalContent = document.getElementById('modal-content-user');
-            modalContent.innerHTML = `
-                <h2>User Details</h2>
-                <p>Name: ${user.name}</p>
-                <p>Email: ${user.email}</p>
-                <p>Phone: ${user.phone}</p>
-                <p>ID: ${user.id}</p>
-            `;
-            toggleModal();
-        }
-
+        const url = 'https://usersapi-production-64dc.up.railway.app/api/users';
+        //const url = 'http://localhost:3001/api/users';
         async function fetchUserData() {
             try {
-                const response = await fetch('http://localhost:3001/api/users'); // Replace with your API endpoint
+                const response = await fetch(url); // API endpoint
                 const responseData = await response.json();
-                userData = responseData.users; // Extract the "users" array from the response
+                
+                userData = responseData;
+                //console.log(userData[0].name);
                 totalPages = Math.ceil(userData.length / pageSize);
                 renderUserTable(currentPage);
-                updatePagination();
+                //updatePagination();
             } catch (error) {
                 console.error('Error fetching user data:', error);
             }
@@ -149,6 +140,7 @@
 
             for (let i = startIndex; i < endIndex && i < userData.length; i++) {
                 const user = userData[i];
+                //console.log(userData[i]);
                 const row = document.createElement("tr");
 
                 //Create name colum
@@ -169,11 +161,7 @@
                 detailsCell.appendChild(buttonIcon);
                 buttonIcon.appendChild(iconEye);
                 row.appendChild(detailsCell);
-
-                //show user details by clicking eye button
-                buttonIcon.addEventListener('click', () => {
-                    displayUserDetails(user);
-                });
+                buttonIcon.addEventListener('click', () => openModal(user));
 
                 //Append data in Row
                 userList.appendChild(row);
@@ -183,6 +171,48 @@
             updatePaginationControls();
         }
 
+        // Function to open the modal and fetch user details from another API
+        async function openModal(user) {
+            const modalContent = document.getElementById('modal-content-user');
+
+            // Fetch user details and project details from the API
+            try {
+
+                const userResponse = await fetch(url); //user API endpoint
+                const userDetails = await userResponse.json();
+
+                const response = await fetch(`https://usersapi-production-64dc.up.railway.app/api/users/${user.id}/projects`);
+                const userProjects = await response.json();
+                //console.log(userDetails[0].project_id);
+
+                const userDetail = userDetails.find(userDetail => userDetail.id === user.id);
+                //console.log(userDetail);
+
+                // Concatenate project names with commas
+                let projectNames;
+                //console.log(userProjects.length);
+                if(userProjects.length <= 0){
+                    projectNames = "No project assigned";
+                }
+                else{
+                    projectNames = userProjects.map(project => project.project_name).join(', ');
+                }
+                
+                modalContent.innerHTML = `
+                <h2>User Details</h2>
+                <p>Name: ${user.name}</p>
+                <p>Email: ${user.email}</p>
+                <p>Phone: ${user.phone}</p>
+                <p>User ID: ${user.id}</p>
+                <p>Projects: ${projectNames}</p>
+            `;
+                //Display the modal
+                toggleModal();
+                
+            } catch (error) {
+                console.error('Error fetching user details:', error);
+            }
+        }
         // Event listener for closing the modal
         document.getElementById('close-modal').addEventListener('click', () => {
             toggleModal();
