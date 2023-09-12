@@ -23,7 +23,7 @@ document.getElementById("splitButton").addEventListener("click", function() {
 
     if ( number < 1 || splits < 1 || number % 1 !== 0 || splits % 1 !== 0) {
         alert(`Please enter only postive integer numbers.`);
-        return; // Exit the function if inputs are invalid
+        return; 
     }
 
     const splitValues = [];
