@@ -8,10 +8,23 @@ function getRandomColor() {
 }
 
 document.getElementById("splitButton").addEventListener("click", function() {
-    const number = parseInt(document.getElementById("numberInput").value);
-    const splits = parseInt(document.getElementById("splitInput").value);
+    const numberInput = Number(document.getElementById("numberInput").value);
+    const splitsInput = Number(document.getElementById("splitInput").value);
     const container = document.getElementById("container");
     container.innerHTML = ""; 
+    
+    const number = numberInput;
+    const splits = splitsInput;
+    
+    if(splits > number){
+        alert(`${number} cannot be divided into ${splits} integers.`);
+        return;
+    }
+
+    if ( number < 1 || splits < 1 || number % 1 !== 0 || splits % 1 !== 0) {
+        alert(`Please enter only postive integer numbers.`);
+        return; // Exit the function if inputs are invalid
+    }
 
     const splitValues = [];
     let remaining = number;
