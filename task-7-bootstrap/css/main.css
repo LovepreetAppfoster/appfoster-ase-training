@@ -1,0 +1,49 @@
+body{
+  background-color: #f3f6fd;
+}
+h4{
+  font-size: 20px;
+}
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+}
+.nav-ul {
+  font-size: 20px;
+}
+.nav-link{
+  font-size: 20px;
+}
+.custom-nav-btn{
+  width: 22rem;
+}
+
+.custom-desc{
+  margin-right: 41px;
+}
+.desc-top{
+  margin-top: -8px;
+  font-size: 12px;
+}
+.custom-pro{
+  margin-right: 5.4rem;
+}
+.cus-btn{
+  border: none;
+  background-color: transparent;
+  outline: none;
+  margin-left: -40px;
+  font-size: 16px;
+}
+.cus-badge{
+  width: 32%;
+  height: 11rem;
+  border-radius: 25px;
+}
+.test:after {
+  content: '\2807';
+  font-size: 20px;
+}
+.cus-radius{
+  border-radius: 30px;
+}

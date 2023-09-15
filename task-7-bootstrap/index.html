@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <!-- <div class="d-flex pt-3" > -->
+    <div class="d-flex justify-content-between mt-2 ps-4 mb-3">
+      <div class="d-flex ps-1">
+        <a href="#"><i class="bi bi-list fs-3 text-body-emphasis"></i></a>
+        <a href="#" class="navbar-brand fw-bold ps-4 fs-5 pt-2">Portfolio</a>
+        <form class="d-flex custom-nav-btn ms-4" role="search">
+          <input
+            class="form-control me-2 rounded-pill"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="cus-btn" type="submit">
+            <i class="bi bi-search"></i>
+          </button>
+        </form>
+      </div>
+      <!-- navbar list -->
+      <div class="d-flex">
+        <ul class="navbar-nav fs-5 me-4">
+          <li class="nav-item me-2"><i class="bi bi-moon"></i></li>
+          <li class="nav-item me-2"><i class="bi bi-plus-circle-fill"></i></li>
+          <li class="nav-item me-2"><i class="bi bi-bell"></i></li>
+          <li class="nav-item ms-2"><i class="bi bi-person-circle"></i></li>
+        </ul>
+      </div>
+    </div>
+    <!-- </div> -->
+    <!-- Navbar -->
+    <!-- <div class="navbar navbar-light pb-4" style="background-color: #f3f6fd;">
+            <div class="container justify-content-start">
+                <a href="#" class="navbar-brand fw-bold ps-3">Portfolio</a>
+                <form class="d-flex custom-nav-btn" role="search">
+                    <input class="form-control me-2 rounded-pill" type="search" placeholder="Search" aria-label="Search">
+                    <button class="cus-btn" type="submit"><i class="bi bi-search"></i></button> 
+                </form>
+            </div>
+                <ul class="navbar-nav fs-5 me-4">
+                    <li class="nav-item me-2"><i class="bi bi-moon"></i></li>
+                    <li class="nav-item me-2"><i class="bi bi-plus-circle-fill"></i></li>
+                    <li class="nav-item me-2"><i class="bi bi-bell"></i></li>
+                    <li class="nav-item ms-2"><i class="bi bi-person-circle"></i></li>
+                </ul>                                                                                                                                                       
+    </div> -->
+    <div class="d-flex">
+      <!-- Sidebar -->
+      <div class="d-flex py-5">
+        <ul
+          class="nav-flush flex-column px-4 text-center"
+          style="list-style-type: none"
+        >
+          <li class="nav-item">
+            <a href="#" class="nav-link py-3 active text-center">
+              <div
+                class="rounded-circle bg-dark text-light"
+                style="height: 2rem; width: 2rem"
+              >
+                <i class="bi bi-house-door-fill"></i>
+              </div>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link py-3 text-center">
+              <i class="bi bi-pie-chart"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link py-3 text-center">
+              <i class="bi bi-calendar"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link py-3 text-center">
+              <i class="bi bi-gear"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- Project deatails -->
+      <div class="d-flex bg-white flex-column flex-fill px-3 pb-3 cus-radius">
+        <div class="d-flex justify-content-between mt-4">
+          <h4>Projects</h4>
+          <h4>December, 12</h4>
+        </div>
+        <div class="d-flex mt-3">
+          <h4 class="custom-pro">45</h4>
+          <h4 class="custom-pro">24</h4>
+          <h4>62</h4>
+        </div>
+        <div class="d-flex custom-desc">
+          <p class="custom-desc desc-top">In Progress &#9900;</p>
+          <p class="custom-desc desc-top">Upcoming &#9900;</p>
+          <p class="desc-top">Total Projects</p>
+        </div>
+        <div class="d-flex flex-wrap mt-3 justify-content-between">
+          <div class="badge cus-badge" style="background-color: #fee4cb">
+            <div class="d-flex justify-content-between mt-2 ms-1">
+              <p class="mt-2 text-body-tertiary">December 10, 2020</p>
+              <div class="test text-dark"></div>
+            </div>
+            <div class="container mt-3">
+              <h6 class="text-dark-emphasis">Web Designing</h6>
+              <p class="text-body-secondary">Prototyping</p>
+            </div>
+            <div class="d-flex pt-4 ps-1">
+              <div
+                class="badge rounded-pill"
+                style="
+                  color: #ff9d3e;
+                  background-color: #fff4ea;
+                  font-size: 11px;
+                  width: 85px;
+                "
+              >
+                2 days left
+              </div>
+            </div>
+          </div>
+          <div class="badge cus-badge" style="background-color: #e9e7fd">
+            <div class="d-flex justify-content-between mt-2 ms-1">
+              <p class="mt-2 text-body-tertiary">December 10, 2020</p>
+              <div class="test text-dark"></div>
+            </div>
+            <div class="container mt-3">
+              <h6 class="text-dark-emphasis">Web Designing</h6>
+              <p class="text-body-secondary">Prototyping</p>
+            </div>
+            <div class="d-flex pt-4 ps-1">
+              <div
+                class="badge rounded-pill"
+                style="
+                  color: #5545f0;
+                  background-color: #f6f5fe;
+                  font-size: 11px;
+                  width: 85px;
+                "
+              >
+                2 days left
+              </div>
+            </div>
+          </div>
+          <div class="badge cus-badge" style="background-color: #dbf6fd">
+            <div class="d-flex justify-content-between mt-2 ms-1">
+              <p class="mt-2 text-body-tertiary">December 10, 2020</p>
+              <div class="test text-dark"></div>
+            </div>
+            <div class="container mt-3">
+              <h6 class="text-dark-emphasis">Web Designing</h6>
+              <p class="text-body-secondary">Prototyping</p>
+            </div>
+            <div class="d-flex pt-4 ps-1">
+              <div
+                class="badge rounded-pill"
+                style="
+                  color: #2a8097;
+                  background-color: #f1fbfe;
+                  font-size: 11px;
+                  width: 85px;
+                "
+              >
+                2 days left
+              </div>
+            </div>
+          </div>
+          <div class="badge cus-badge mt-3" style="background-color: #ffd3e2">
+            <div class="d-flex justify-content-between mt-2 ms-1">
+              <p class="mt-2 text-body-tertiary">December 10, 2020</p>
+              <div class="test text-dark"></div>
+            </div>
+            <div class="container mt-3">
+              <h6 class="text-dark-emphasis">Web Designing</h6>
+              <p class="text-body-secondary">Prototyping</p>
+            </div>
+            <div class="d-flex pt-4 ps-1">
+              <div
+                class="badge rounded-pill"
+                style="
+                  color: #e76793;
+                  background-color: #ffedf3;
+                  font-size: 11px;
+                  width: 85px;
+                "
+              >
+                2 days left
+              </div>
+            </div>
+          </div>
+          <div class="badge cus-badge mt-3" style="background-color: #c8f7dc">
+            <div class="d-flex justify-content-between mt-2 ms-1">
+              <p class="mt-2 text-body-tertiary">December 10, 2020</p>
+              <div class="test text-dark"></div>
+            </div>
+            <div class="container mt-3">
+              <h6 class="text-dark-emphasis">Web Designing</h6>
+              <p class="text-body-secondary">Prototyping</p>
+            </div>
+            <div class="d-flex pt-4 ps-1">
+              <div
+                class="badge rounded-pill"
+                style="
+                  color: #48ca7f;
+                  background-color: #e9fcf1;
+                  font-size: 11px;
+                  width: 85px;
+                "
+              >
+                2 days left
+              </div>
+            </div>
+          </div>
+          <div class="badge cus-badge mt-3" style="background-color: #d5deff">
+            <div class="d-flex justify-content-between mt-2 ms-1">
+              <p class="mt-2 text-body-tertiary">December 10, 2020</p>
+              <div class="test text-dark"></div>
+            </div>
+            <div class="container mt-3">
+              <h6 class="text-dark-emphasis">Web Designing</h6>
+              <p class="text-body-secondary">Prototyping</p>
+            </div>
+            <div class="d-flex pt-4 ps-1">
+              <div
+                class="badge rounded-pill"
+                style="
+                  color: #476df9;
+                  background-color: #eef2ff;
+                  font-size: 11px;
+                  width: 85px;
+                "
+              >
+                2 days left
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Sidebar -->
+    <!-- <div class="d-inline-flex " style="height:35rem; float: left;">
+        <ul class="nav nav-flush flex-column ms-1 text-center" style="padding-top: 6.5rem; background-color: #f3f6fd;">
+            <li class="nav-item">
+                    <a href="#" class="nav-link py-3" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Home" data-bs-original-title="Home">
+                        <div class="active">
+                            <i class="bi bi-house-door-fill"></i>
+                        </div>
+                    </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link py-3" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Dashboard" data-bs-original-title="Dashboard">
+                <i class="bi bi-pie-chart"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link py-3" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Orders" data-bs-original-title="Orders">
+                <i class="bi bi-calendar"></i>
+              </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link py-3" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Products" data-bs-original-title="Products">
+                    <i class="bi bi-gear"></i>
+                </a>
+            </li>
+          </ul>
+    </div> -->
+    <!-- Project deatails -->
+    <!-- <div class="container border border-primary" style="background-color: white;">
+        <div class="d-flex justify-content-between mt-4">
+            <h4>Projects</h4>
+            <h4>December, 12</h4>
+        </div>
+        <div class="d-flex mt-4">
+            <h4 class="custom-pro">45</h4>
+            <h4 class="custom-pro">24</h4>
+            <h4>62</h4>
+        </div>
+        <div class="d-flex custom-desc">
+            <p class="custom-desc desc-top">In Progress &#9900;</p>
+            <p class="custom-desc desc-top">Upcoming &#9900;</p>
+            <p class="desc-top">Total Projects</p>
+        </div>
+        <div class="d-flex flex-wrap mt-3 justify-content-between">
+            <div class="badge cus-badge" style="background-color: #fee4cb;">
+                <div class="d-flex justify-content-between mt-2 ms-1">
+                    <p class="mt-2 text-body-tertiary">December 10, 2020</p>
+                    <div class="test text-dark"></div>
+                </div>
+                <div class="container mt-3">
+                    <h6 class="text-dark-emphasis">Web Designing</h6>
+                    <p class="text-body-secondary">Prototyping</p>
+                </div>
+                <div class="d-flex pt-4 ps-1">
+                    <div class="badge rounded-pill" style="color: #ff9d3e; background-color: #fff4ea; font-size: 11px; width: 85px;">2 days left</div>
+                </div>
+            </div>
+            <div class="badge cus-badge" style="background-color: #e9e7fd;">
+                <div class="d-flex justify-content-between mt-2 ms-1">
+                    <p class="mt-2 text-body-tertiary">December 10, 2020</p>
+                    <div class="test text-dark"></div>
+                </div>
+                <div class="container mt-3">
+                    <h6 class="text-dark-emphasis">Web Designing</h6>
+                    <p class="text-body-secondary">Prototyping</p>
+                </div>
+                <div class="d-flex pt-4 ps-1">
+                    <div class="badge rounded-pill" style="color: #5545f0; background-color: #f6f5fe; font-size: 11px; width: 85px;">2 days left</div>
+                </div>
+            </div>
+            <div class="badge cus-badge" style="background-color: #dbf6fd;">
+                <div class="d-flex justify-content-between mt-2 ms-1">
+                    <p class="mt-2 text-body-tertiary">December 10, 2020</p>
+                    <div class="test text-dark"></div>
+                </div>
+                <div class="container mt-3">
+                    <h6 class="text-dark-emphasis">Web Designing</h6>
+                    <p class="text-body-secondary">Prototyping</p>
+                </div>
+                <div class="d-flex pt-4 ps-1">
+                    <div class="badge rounded-pill" style="color: #2a8097; background-color: #f1fbfe; font-size: 11px; width: 85px;">2 days left</div>
+                </div>
+            </div>
+            <div class="badge cus-badge mt-3" style="background-color: #ffd3e2;">
+                <div class="d-flex justify-content-between mt-2 ms-1">
+                    <p class="mt-2 text-body-tertiary">December 10, 2020</p>
+                    <div class="test text-dark"></div>
+                </div>
+                <div class="container mt-3">
+                    <h6 class="text-dark-emphasis">Web Designing</h6>
+                    <p class="text-body-secondary">Prototyping</p>
+                </div>
+                <div class="d-flex pt-4 ps-1">
+                    <div class="badge rounded-pill" style="color: #e76793; background-color: #ffedf3; font-size: 11px; width: 85px;">2 days left</div>
+                </div>
+            </div>
+            <div class="badge cus-badge mt-3" style="background-color: #c8f7dc;">
+                <div class="d-flex justify-content-between mt-2 ms-1">
+                    <p class="mt-2 text-body-tertiary">December 10, 2020</p>
+                    <div class="test text-dark"></div>
+                </div>
+                <div class="container mt-3">
+                    <h6 class="text-dark-emphasis">Web Designing</h6>
+                    <p class="text-body-secondary">Prototyping</p>
+                </div>
+                <div class="d-flex pt-4 ps-1">
+                    <div class="badge rounded-pill" style="color: #48ca7f; background-color: #e9fcf1; font-size: 11px; width: 85px;">2 days left</div>
+                </div>
+            </div>
+            <div class="badge cus-badge mt-3" style="background-color: #d5deff;">
+                <div class="d-flex justify-content-between mt-2 ms-1">
+                    <p class="mt-2 text-body-tertiary">December 10, 2020</p>
+                    <div class="test text-dark"></div>
+                </div>
+                <div class="container mt-3">
+                    <h6 class="text-dark-emphasis">Web Designing</h6>
+                    <p class="text-body-secondary">Prototyping</p>
+                </div>
+                <div class="d-flex pt-4 ps-1">
+                    <div class="badge rounded-pill" style="color: #476df9; background-color: #eef2ff; font-size: 11px; width: 85px;">2 days left</div>
+                </div>
+            </div>
+            
+        </div>
+    </div> -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
