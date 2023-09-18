@@ -47,3 +47,11 @@ h4{
 .cus-radius{
   border-radius: 30px;
 }
+
+@media (max-width: 700px) {
+  .custom-container {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+  }
+}
