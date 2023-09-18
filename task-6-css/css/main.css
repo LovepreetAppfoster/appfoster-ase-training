@@ -18,10 +18,11 @@ h4{
   color: #b6aed7;
 }
 .left-div{
-  margin-top: 2rem;
-  padding: 2rem;
+  /* margin-top: 2rem; */
+  /* padding: 2rem; */
+  padding: 3rem 2rem 2rem 2rem;
   width: 60%; 
-  float: left;
+  /* float: left; */
 }
 .left-sub-div{
   margin-bottom: 3.5rem;
@@ -90,8 +91,8 @@ span{
   border-radius: 50%;
 }
 .right-div{
-  float: left;
-  width: 27%;
+  /* float: left; */
+  width: 22%;
 }
 .right-pic-div{
   /* height: 40%; */
@@ -165,3 +166,10 @@ a{
   font-size: 13px;
 }
 /*# sourceMappingURL=main.css.map */
+
+/* Testting */
+.custom-border {
+  border: 2px solid #007bff; /* Change color as desired */
+  /* padding: 20px;  */
+  /* Add padding to the container if needed */
+}
