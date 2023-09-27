@@ -32,7 +32,7 @@
                     <td>
                       {{-- <button class="btn btn-info ms-2 show-details-btn" id="button-icon" data-id="{{ ['emp_id'] }}">View
                       </button> --}}
-                      <a href="{{url('/users/user/projects')}}/{{$id}}/edit/{{$project['project_id']}}">
+                      <a href="{{url('/users/user/projects')}}/{{$id}}/edit/{{$project['project_id']}}/{{$project['name']}}">
                         <button class="btn btn-warning ms-2">Update</button>
                       </a>
                       <a href="{{url('/users/user/projects')}}/{{$id}}/delete/{{$project['project_id']}}">

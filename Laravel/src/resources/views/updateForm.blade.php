@@ -34,14 +34,14 @@
         <div id="error-message" class="alert alert-danger" style="display: none;"></div>
         <div class="mb-3">
           <label for="name" class="form-label">Name</label>
-          <input type="text" class="form-control" id="name" name="name">
+          <input type="text" class="form-control" id="name" name="name" value="{{$name}}">
           <span class="text-danger">
             
           </span>
         </div>
         <div class="mb-3">
           <label for="email" class="form-label">Email address</label>
-          <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
+          <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" value="{{$email}}">
           <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>

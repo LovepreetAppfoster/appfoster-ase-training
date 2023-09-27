@@ -60,6 +60,10 @@
                       <a href="{{url('/users/edit')}}/{{ $user['emp_id'] }}">
                         <button class="btn btn-warning ms-2">Update</button>
                       </a>
+                      @php
+                        session(['edit_email' => $user['email']]);
+                        session(['edit_name' => $user['name']]); 
+                      @endphp
                       <a href="{{url('/users/user/del')}}/{{$user['emp_id']}}">
                         <button class="btn btn-danger ms-2">Delete</button>
                       </a>

@@ -16,4 +16,9 @@ class TestController extends Controller
         // return $users;
         //return view('employees')->with($users);
      }
+
+     public function session(){
+        $sesseion = session()->all();
+        print_r($sesseion);
+     }
 }
