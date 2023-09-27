@@ -11,5 +11,8 @@ module.exports = (sequelize, Sequelize) => {
     }
   });
 
+  console.log(Tutorial=== sequelize.models.Tutorial); // true
   return Tutorial;
-};
+}; 
+
+

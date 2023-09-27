@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\Books\BooksController;
+use App\Http\Controllers\Api\ApiEmployeeController;
+use App\Http\Controllers\ExampleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +30,21 @@ Route::get('/', function () {
         'message' => 'This is a simple example of item returned by your APIs. Everyone can see it.'
     ]);
 });
+
+// Employee API Route
+Route::apiResource('users', ApiEmployeeController::class);
+
+//Project API Routes
+Route::get('/users/{id}/projects', [ApiEmployeeController::class, 'showProjects']);
+Route::delete('/users/{id}/projects/{proid}', [ApiEmployeeController::class, 'deleteProject']);
+Route::post('/users/{id}/projects', [ApiEmployeeController::class, 'createProject']);
+Route::put('/users/{id}/projects/{prodid}', [ApiEmployeeController::class, 'updateProject']);
+
+Route::prefix('api')->group(function () {
+    Route::post('example', 'ExampleController@example');
+});
+
+
+// Route::get('/view', function(){
+//     return view('welcome');
+// });
