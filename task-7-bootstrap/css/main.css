@@ -36,7 +36,7 @@ h4{
   font-size: 16px;
 }
 .cus-badge{
-  width: 32%;
+  /* width: 32%; */
   height: 11rem;
   border-radius: 25px;
 }
@@ -48,10 +48,17 @@ h4{
   border-radius: 30px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .custom-container {
       flex-direction: column;
       justify-content: center;
       text-align: center;
   }
 }
+
+@media (min-width: 769px) {
+  .cus-badge{
+    width: 32%;
+  }
+}
+
